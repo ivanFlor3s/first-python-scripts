@@ -26,13 +26,19 @@ jsonString = Aregex.sub('',jsonString)
 #print(jsonString)
 #print(queryString)
 
-#2 - Parseo de Roles en ambos archivos 
+
+
+
+
+
+#2 - Parseo de Roles en ambos archivos ---------------------------------------------------------------------------------------------
 
 #2.1 - Obtengo Ambas listas
 jsonRolesRegex = re.compile(r'roleName\"\:\"(\w* . \w*)')
 listRolesJson = jsonRolesRegex.findall(jsonString)
 
 queryString = re.compile(r'Acceso a ').sub('',queryString)
+queryString = re.compile(r'\.').sub('',queryString)
 listRolesQuery = queryString.split('\n')
 
 #--VER como estan generandose la lista de ROles
@@ -48,18 +54,33 @@ def filterRoles(elemento):
 	else:
 		return False
 
+cantRolesJson = len(listRolesJson)
+cantRolesQuery = len(listRolesQuery)
 
-#rolesFaltantes = list(set(listRolesJson).symmetric_difference(set(listRolesQuery)))
+print('Roles en JSON: ' + str(cantRolesJson))
+print('Roles en Query: ' + str(cantRolesQuery))
 
-rolesFaltantes = list(filter(filterRoles,listRolesJson))
+
+rolesFaltantes = list(set(listRolesJson) ^ (set(listRolesQuery)))
+cantRolesFaltantes = len(rolesFaltantes)
+
+if(cantRolesFaltantes != abs(cantRolesJson - cantRolesQuery)):
+	print('Algo salio mal: La cantidad de roles faltantes no coincide')
+
+#rolesFaltantes = list(filter(filterRoles,listRolesJson))
 # for rol in listRolesJson:
 # 	if filterRoles(rol,listRolesQuery):
 # 		rolesFaltantes.append(rol)
 
+if rolesFaltantes == 0 :
+	print('Se generaron todos los roles')
+else: 
+	print('Roles faltantes: ')
+	for r in rolesFaltantes:
+		print(r)
 
-for r in rolesFaltantes:
-	print(r)
+#Dejo en rolesFaltantes los roles a generar
 
-print('SIgo vivaracho')
 #3 - GEneracion del nuevo JSON
+#Deberia poder filtrar en el JSON solo aquellos que tengan los roles faltantes
 
