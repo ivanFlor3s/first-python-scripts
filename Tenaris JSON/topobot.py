@@ -38,9 +38,6 @@ jsonString = Aregex.sub('',jsonString)
 # tempJsonFile.close()
 
 
-
-
-
 #2 - Parseo de Roles en ambos archivos ---------------------------------------------------------------------------------------------
 
 #2.1 - Obtengo Ambas listas
@@ -108,3 +105,7 @@ os.makedirs('temp',exist_ok = True)
 newJsonFile = open(os.path.join(os.getcwd(),'temp','JSON.txt'),'w',encoding = 'utf-8-sig')
 newJsonFile.write(newJsonString)
 newJsonFile.close()
+
+
+#TO DO - Hacer la consulta con la base SQL sin que sea necesario copiar desde la query
+#TO DO - Estructura de Logs en carpetas segun Hora
