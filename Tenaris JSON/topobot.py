@@ -6,6 +6,7 @@
 
 import re
 import os
+import json
 
 try:
 	jsonFile = open(os.path.join(os.getcwd(),'J.txt'),encoding = 'utf-8-sig')
@@ -13,8 +14,14 @@ try:
 except:
 	print(r'No se encontraron los archivos, recorda que deben tener de nombres: \nJSON: J.txt\n Query: Q.txt')
 
+
+
 jsonString = jsonFile.read()
 queryString = queryFile.read()
+
+
+jsonFile.close()
+queryFile.close()
 
 #1.1 Eliminar el caracter Â  del jsonString
 Aregex = re.compile(r'Â')
@@ -26,6 +33,9 @@ jsonString = Aregex.sub('',jsonString)
 #print(jsonString)
 #print(queryString)
 
+# tempJsonFile = open('temp.txt','w')
+# tempJsonFile.write(jsonString)
+# tempJsonFile.close()
 
 
 
@@ -72,7 +82,7 @@ if(cantRolesFaltantes != abs(cantRolesJson - cantRolesQuery)):
 # 	if filterRoles(rol,listRolesQuery):
 # 		rolesFaltantes.append(rol)
 
-if rolesFaltantes == 0 :
+if cantRolesFaltantes == 0 :
 	print('Se generaron todos los roles')
 else: 
 	print('Roles faltantes: ')
@@ -81,6 +91,20 @@ else:
 
 #Dejo en rolesFaltantes los roles a generar
 
-#3 - GEneracion del nuevo JSON
+#3 - GEneracion del nuevo JSON-----------------------------------------------------
 #Deberia poder filtrar en el JSON solo aquellos que tengan los roles faltantes
 
+inputJson = json.loads(jsonString)
+
+outputJson = [x for x in inputJson if (x['roleName'] in rolesFaltantes)]
+
+outputJson = json.dumps(outputJson, ensure_ascii = False).encode('utf-8')
+#print(outputJson.decode())
+newJsonString = outputJson.decode()
+
+
+os.makedirs('temp',exist_ok = True)
+
+newJsonFile = open(os.path.join(os.getcwd(),'temp','JSON.txt'),'w',encoding = 'utf-8-sig')
+newJsonFile.write(newJsonString)
+newJsonFile.close()
