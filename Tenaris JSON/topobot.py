@@ -7,6 +7,11 @@
 import re
 import os
 import json
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s') 
+#Desactivo logueos, en caso de querer verlos 
+logging.disable(logging.CRITICAL)
 
 try:
 	jsonFile = open(os.path.join(os.getcwd(),'J.txt'),encoding = 'utf-8-sig')
@@ -30,8 +35,9 @@ Aregex = re.compile(r'Â')
 jsonString = Aregex.sub('',jsonString)
 
 #--VER ambos strigns
-#print(jsonString)
-#print(queryString)
+logging.debug('Ambos STRINGS:')
+logging.debug('JSON: \n' + jsonString)
+logging.debug('Query: \n' + queryString)
 
 # tempJsonFile = open('temp.txt','w')
 # tempJsonFile.write(jsonString)
@@ -49,8 +55,10 @@ queryString = re.compile(r'\.').sub('',queryString)
 listRolesQuery = queryString.split('\n')
 
 #--VER como estan generandose la lista de ROles
-#print(listRolesJson)
-#print(listRolesQuery)
+logging.debug('Lista de Roles')
+logging.debug('Json roles: \n' + str(listRolesJson))
+logging.debug('Query roles: \n' + str(listRolesQuery))
+
 
 #2.2 - Comparo la lista de json con la de los roles para obtener los roles faltantes
 #for rol in listRolesJson
@@ -72,7 +80,7 @@ rolesFaltantes = list(set(listRolesJson) ^ (set(listRolesQuery)))
 cantRolesFaltantes = len(rolesFaltantes)
 
 if(cantRolesFaltantes != abs(cantRolesJson - cantRolesQuery)):
-	print('Algo salio mal: La cantidad de roles faltantes no coincide')
+	raise Exception ('Algo salio mal: La cantidad de roles faltantes no coincide')
 
 #rolesFaltantes = list(filter(filterRoles,listRolesJson))
 # for rol in listRolesJson:
