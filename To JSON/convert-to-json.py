@@ -12,6 +12,12 @@ import pyperclip as pp
 HEIGHT = 700
 WIDTH = 800
 
+
+
+
+root = Tk()
+
+#root.config(width='650',height='400')
 def convert(string):
     lista = string.split('\n')
     #Hago un sgrint de mierda y ya fue
@@ -23,12 +29,11 @@ def convert(string):
     return jsonString
 
 def updateLabel():
+    jsonString = pp.paste()
     texto.set(pp.paste())
 
-
-root = Tk()
-
-#root.config(width='650',height='400')
+def delContent():
+    texto.set('')
 
 canvas = Canvas(root,height = HEIGHT, width = WIDTH)
 canvas.pack()
@@ -36,10 +41,10 @@ canvas.pack()
 inputTextLabel = Label(root, text='Input')
 inputTextLabel.place(relx = 0.01, y = 0.1)
 
-convertButton = Button(root, text = 'Cargar')
+convertButton = Button(root, text = 'Cargar',command=updateLabel)
 convertButton.place(x=200, y =20)
 
-resetButton = Button(root, text = 'Limpiar')
+resetButton = Button(root, text = 'Limpiar',command = delContent)
 resetButton.place(x=300, y =20)
 
 # Mostrar el JSON copiade desde portapapeles
