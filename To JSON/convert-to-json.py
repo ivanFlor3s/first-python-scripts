@@ -23,7 +23,7 @@ def convert(string):
     return jsonString
 
 def updateLabel():
-    inputLabel["text"]=pp.paste()
+    texto.set(pp.paste())
 
 
 root = Tk()
@@ -36,14 +36,17 @@ canvas.pack()
 inputTextLabel = Label(root, text='Input')
 inputTextLabel.place(relx = 0.01, y = 0.1)
 
-convertButton = Button(root, text = 'Cargar', command=updateLabel())
+convertButton = Button(root, text = 'Cargar')
 convertButton.place(x=200, y =20)
 
 resetButton = Button(root, text = 'Limpiar')
 resetButton.place(x=300, y =20)
 
 # Mostrar el JSON copiade desde portapapeles
-inputLabel = Label(root, text = 'Esperando...')
+texto=StringVar()
+texto.set('Esperando...')
+inputLabel = Label(root, text ='')
+inputLabel.config(textvariable=texto)
 inputLabel.place(x=10,y=30)
 
 
