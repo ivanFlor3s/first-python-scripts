@@ -8,6 +8,7 @@ from tkinter import *
 import json
 import logging
 import pyperclip as pp
+import re
 
 HEIGHT =300
 WIDTH = 150
@@ -18,24 +19,33 @@ logging.basicConfig(filename ='logout.txt',level=logging.DEBUG, format = '%(asct
 root = Tk()
 root.geometry('800x800')
 root.config(bg='#46b1e0')
+
+
 def convert():
-    lista = texto.get().split('\n')
-    logging.debug('Lista antes de convertir: ')
+    lista = pp.paste().split('\n')
+    logging.debug('Lista antes de convertir: ' + pp.paste())
     jsonString = '['
     for numero in lista:
-        jsonString + r'{"attrs":[],"refnum":"'+ numero + r'"},\n' 
-        logging.debug(r'Se agrega: {"attrs":[],"refnum":"'+ numero + r'"}')
-    jsonString +']'
+        if numero != '':
+            jsonString += '{"attrs":[],"refnum":"'+ numero +'"},'+'\n'
+            logging.debug(r'Se agrega: {"attrs":[],"refnum":"'+ numero + r'"}')
+    jsonString +=']'
+    logging.debug('Mi json String es:' + jsonString)
+    rex =re.compile(',\n\]')
+    jsonString=rex.sub(r']',jsonString)
     outLabel.insert(INSERT,jsonString)
+    #pp.copy(jsonString)
 
 
 def updateLabel():
     inputJsonString = pp.paste()
     texto.set(pp.paste())
+    aux = pp.paste()
     logging.debug(texto.get())
 
 def delContent():
     texto.set('')
+    outLabel.delete('1.0','2.0')
 
 
 inputTextLabel = Label(root, text='Input')
@@ -53,6 +63,8 @@ resetButton.grid(row=1,column=3,pady=10)
 # Mostrar el JSON copiade desde portapapeles
 texto=StringVar()
 texto.set('Esperando...')
+
+aux = ''
 
 inputLabel = Label(root, text ='')
 inputLabel.config(textvariable=texto)
