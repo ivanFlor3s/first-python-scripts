@@ -226,3 +226,113 @@
 3423
 1243
 1241
+2020-03-24 19:09:39,916 - DEBUG - 1234
+3423
+1243
+1241
+2020-03-24 19:09:40,900 - DEBUG - Lista antes de convertir: 1234
+3423
+1243
+1241
+2020-03-24 19:09:40,900 - DEBUG - Se agrega: {"attrs":[],"refnum":"1234"}
+2020-03-24 19:09:40,900 - DEBUG - Se agrega: {"attrs":[],"refnum":"3423"}
+2020-03-24 19:09:40,900 - DEBUG - Se agrega: {"attrs":[],"refnum":"1243"}
+2020-03-24 19:09:40,900 - DEBUG - Se agrega: {"attrs":[],"refnum":"1241"}
+2020-03-24 19:09:40,900 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"},
+]
+2020-03-24 19:11:09,120 - DEBUG - 1234
+3423
+1243
+1241
+2020-03-24 19:11:10,011 - DEBUG - Lista antes de convertir: 1234
+3423
+1243
+1241
+2020-03-24 19:11:10,011 - DEBUG - Se agrega: {"attrs":[],"refnum":"1234"}
+2020-03-24 19:11:10,011 - DEBUG - Se agrega: {"attrs":[],"refnum":"3423"}
+2020-03-24 19:11:10,011 - DEBUG - Se agrega: {"attrs":[],"refnum":"1243"}
+2020-03-24 19:11:10,011 - DEBUG - Se agrega: {"attrs":[],"refnum":"1241"}
+2020-03-24 19:11:10,011 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"},
+]
+2020-03-24 19:13:56,005 - DEBUG - 1234
+3423
+1243
+1241
+2020-03-24 19:13:57,194 - DEBUG - Lista antes de convertir: 1234
+3423
+1243
+1241
+2020-03-24 19:13:57,194 - DEBUG - Se agrega: {"attrs":[],"refnum":"1234"}
+2020-03-24 19:13:57,194 - DEBUG - Se agrega: {"attrs":[],"refnum":"3423"}
+2020-03-24 19:13:57,194 - DEBUG - Se agrega: {"attrs":[],"refnum":"1243"}
+2020-03-24 19:13:57,194 - DEBUG - Se agrega: {"attrs":[],"refnum":"1241"}
+2020-03-24 19:13:57,194 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"},
+]
+2020-03-24 19:17:19,680 - DEBUG - [{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"}]
+2020-03-24 19:17:21,305 - DEBUG - Lista antes de convertir: [{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"}]
+2020-03-24 19:17:21,305 - DEBUG - Se agrega: {"attrs":[],"refnum":"[{"attrs":[],"refnum":"1234"},"}
+2020-03-24 19:17:21,305 - DEBUG - Se agrega: {"attrs":[],"refnum":"{"attrs":[],"refnum":"3423"},"}
+2020-03-24 19:17:21,305 - DEBUG - Se agrega: {"attrs":[],"refnum":"{"attrs":[],"refnum":"1243"},"}
+2020-03-24 19:17:21,305 - DEBUG - Se agrega: {"attrs":[],"refnum":"{"attrs":[],"refnum":"1241"}]"}
+2020-03-24 19:17:21,305 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"[{"attrs":[],"refnum":"1234"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"3423"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"1243"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"1241"}]"},
+]
+2020-03-24 19:20:03,827 - DEBUG - [{"attrs":[],"refnum":"[{"attrs":[],"refnum":"1234"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"3423"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"1243"},"},
+{"attrs":[],"refnum":"{"attrs":[],"refnum":"1241"}]"}]
+2020-03-24 19:20:11,033 - DEBUG - 1234
+3423
+1243
+1241
+2020-03-24 19:20:11,892 - DEBUG - Lista antes de convertir: 1234
+3423
+1243
+1241
+2020-03-24 19:20:11,892 - DEBUG - Se agrega: {"attrs":[],"refnum":"1234"}
+2020-03-24 19:20:11,892 - DEBUG - Se agrega: {"attrs":[],"refnum":"3423"}
+2020-03-24 19:20:11,892 - DEBUG - Se agrega: {"attrs":[],"refnum":"1243"}
+2020-03-24 19:20:11,892 - DEBUG - Se agrega: {"attrs":[],"refnum":"1241"}
+2020-03-24 19:20:11,892 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"},
+]
+2020-03-24 19:22:14,586 - DEBUG - [{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"}]
+2020-03-24 19:22:22,695 - DEBUG - 1234
+3423
+1243
+1241
+2020-03-24 19:22:24,367 - DEBUG - Lista antes de convertir: 1234
+3423
+1243
+1241
+2020-03-24 19:22:24,367 - DEBUG - Se agrega: {"attrs":[],"refnum":"1234"}
+2020-03-24 19:22:24,367 - DEBUG - Se agrega: {"attrs":[],"refnum":"3423"}
+2020-03-24 19:22:24,367 - DEBUG - Se agrega: {"attrs":[],"refnum":"1243"}
+2020-03-24 19:22:24,367 - DEBUG - Se agrega: {"attrs":[],"refnum":"1241"}
+2020-03-24 19:22:24,367 - DEBUG - Mi json String es:[{"attrs":[],"refnum":"1234"},
+{"attrs":[],"refnum":"3423"},
+{"attrs":[],"refnum":"1243"},
+{"attrs":[],"refnum":"1241"},
+]
