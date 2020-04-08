@@ -1,0 +1,13 @@
+2020-04-07 23:56:43,253 - DEBUG - Starting new HTTPS connection (1): www.who.int:443
+2020-04-07 23:56:43,557 - DEBUG - https://www.who.int:443 "GET /emergencies/diseases/novel-coronavirus-2019/situation-reports HTTP/1.1" 200 None
+2020-04-08 00:03:32,141 - DEBUG - Starting new HTTPS connection (1): www.who.int:443
+2020-04-08 00:03:32,305 - DEBUG - https://www.who.int:443 "GET /emergencies/diseases/novel-coronavirus-2019/situation-reports HTTP/1.1" 200 None
+2020-04-08 00:03:32,373 - DEBUG - Se trae info del link: 20200407-sitrep-78-covid-19
+2020-04-08 00:06:57,710 - DEBUG - Starting new HTTPS connection (1): www.who.int:443
+2020-04-08 00:06:57,884 - DEBUG - https://www.who.int:443 "GET /emergencies/diseases/novel-coronavirus-2019/situation-reports HTTP/1.1" 200 None
+2020-04-08 00:07:56,837 - DEBUG - Starting new HTTPS connection (1): www.who.int:443
+2020-04-08 00:07:56,981 - DEBUG - https://www.who.int:443 "GET /emergencies/diseases/novel-coronavirus-2019/situation-reports HTTP/1.1" 200 None
+2020-04-08 00:08:10,045 - DEBUG - Se actualizo el arhivo PDF
+2020-04-08 00:08:10,049 - DEBUG - Starting new HTTPS connection (1): www.who.int:443
+2020-04-08 00:08:10,199 - DEBUG - https://www.who.int:443 "GET /emergencies/diseases/novel-coronavirus-2019/situation-reports HTTP/1.1" 200 None
+2020-04-08 00:08:11,685 - CRITICAL - Se trae info del link: 20200407-sitrep-78-covid-19
