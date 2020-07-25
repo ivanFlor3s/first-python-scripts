@@ -336,3 +336,10 @@
 {"attrs":[],"refnum":"1243"},
 {"attrs":[],"refnum":"1241"},
 ]
+2020-07-24 20:51:59,028 - DEBUG - Lista antes de convertir: 
+2020-07-24 20:51:59,047 - DEBUG - Mi json String es:[]
+2020-07-24 20:52:02,448 - DEBUG - 
+2020-07-24 20:52:05,137 - DEBUG - 
+2020-07-24 20:52:11,662 - DEBUG - 
+2020-07-24 20:52:13,547 - DEBUG - Lista antes de convertir: 
+2020-07-24 20:52:13,547 - DEBUG - Mi json String es:[]

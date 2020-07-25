@@ -20,9 +20,10 @@ page = reader.getPage(1)
 string =page.extractText()
 
 reTalle = re.compile(r'\d\d?')
-numerosList = reTalle.findall(string)
+numerosList1 = reTalle.findall(string)
+numero2 = list(map(lambda x: int(x),numerosList1))
 
-reNombre = re.compile(r'(.*)\n')
+reNombre = re.compile(r'(.*)')
 listNombre = reNombre.search(string).group()
 
 talles = []
@@ -32,6 +33,10 @@ nombres = []
 # loop en paginas para extract
 for pageNum in range(1,paginas):
    texto = reader.getPage(pageNum).extractText()
-   talles.append(reTalle.findall(texto))
+   auxList = reTalle.findall(texto)
+   auxList2 = list(map(lambda x: int(x),auxList))
+   talles.append(auxList2)
    nombres.append(reNombre.search(texto).group())
-    
+   
+
+   
